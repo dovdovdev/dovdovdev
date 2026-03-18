@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — dovdov.dev</title>
+  <meta name="description" content="Contact dovdov.dev — support for Android apps" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">dovdov<span>.</span>dev</a>
+
+      <nav>
+        <a href="index.html">
+          <span data-lang="en" class="visible">Apps</span>
+          <span data-lang="ru">Приложения</span>
+        </a>
+        <a href="contact.html" class="active">
+          <span data-lang="en" class="visible">Contact</span>
+          <span data-lang="ru">Контакт</span>
+        </a>
+        <a href="privacy.html">
+          <span data-lang="en" class="visible">Privacy</span>
+          <span data-lang="ru">Политика</span>
+        </a>
+      </nav>
+
+      <div class="header-right">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+        </div>
+        <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html">
+        <span data-lang="en" class="visible">Apps</span>
+        <span data-lang="ru">Приложения</span>
+      </a>
+      <a href="contact.html">
+        <span data-lang="en" class="visible">Contact</span>
+        <span data-lang="ru">Контакт</span>
+      </a>
+      <a href="privacy.html">
+        <span data-lang="en" class="visible">Privacy Policy</span>
+        <span data-lang="ru">Политика конфиденциальности</span>
+      </a>
+      <a href="terms.html">
+        <span data-lang="en" class="visible">Terms of Service</span>
+        <span data-lang="ru">Условия использования</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <div class="container">
+    <div class="page-hero">
+      <span class="badge badge-blue">✉️
+        <span data-lang="en" class="visible">Get in touch</span>
+        <span data-lang="ru">Свяжитесь с нами</span>
+      </span>
+      <h1 style="margin-top: 12px;">
+        <span data-lang="en" class="visible">Contact Us</span>
+        <span data-lang="ru">Контакт</span>
+      </h1>
+      <p>
+        <span data-lang="en" class="visible">Have a question or issue? We're here to help.</span>
+        <span data-lang="ru">Есть вопрос или проблема? Мы готовы помочь.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Form -->
+        <div>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">
+                <span data-lang="en" class="visible">Your Name</span>
+                <span data-lang="ru">Ваше имя</span>
+              </label>
+              <input type="text" id="name" name="name" required
+                placeholder="John Doe" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">
+                <span data-lang="en" class="visible">Email Address</span>
+                <span data-lang="ru">Email адрес</span>
+              </label>
+              <input type="email" id="email" name="email" required
+                placeholder="john@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="app">
+                <span data-lang="en" class="visible">Related App</span>
+                <span data-lang="ru">Приложение</span>
+              </label>
+              <select id="app" name="app">
+                <option value="">
+                  -- Select app --
+                </option>
+                <option value="wallpaper">Wallpaper App</option>
+                <option value="currency">Currency Converter</option>
+                <option value="workout">Workout App</option>
+                <option value="general">
+                  General
+                </option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">
+                <span data-lang="en" class="visible">Message</span>
+                <span data-lang="ru">Сообщение</span>
+              </label>
+              <textarea id="message" name="message" required
+                placeholder="Describe your issue or question..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+              <span data-lang="en" class="visible">Send Message</span>
+              <span data-lang="ru">Отправить</span>
+              →
+            </button>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            ✅
+            <span data-lang="en" class="visible">Message sent! We'll get back to you within 24 hours.</span>
+            <span data-lang="ru">Сообщение отправлено! Мы ответим в течение 24 часов.</span>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon">📧</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:support@dovdov.dev">support@dovdov.dev</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">🔒</div>
+            <div>
+              <h4>
+                <span data-lang="en" class="visible">Privacy</span>
+                <span data-lang="ru">Конфиденциальность</span>
+              </h4>
+              <a href="mailto:privacy@dovdov.dev">privacy@dovdov.dev</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">⏱️</div>
+            <div>
+              <h4>
+                <span data-lang="en" class="visible">Response Time</span>
+                <span data-lang="ru">Время ответа</span>
+              </h4>
+              <p>
+                <span data-lang="en" class="visible">Usually within 24 hours</span>
+                <span data-lang="ru">Обычно в течение 24 часов</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">📱</div>
+            <div>
+              <h4>Google Play</h4>
+              <p>
+                <span data-lang="en" class="visible">You can also leave a review or report issues directly on Google Play.</span>
+                <span data-lang="ru">Вы также можете оставить отзыв или сообщить о проблеме в Google Play.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo">dovdov<span>.</span>dev</div>
+          <p>
+            <span data-lang="en" class="visible">Simple and beautiful Android apps for everyday use.</span>
+            <span data-lang="ru">Простые и красивые Android-приложения для каждого дня.</span>
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>
+            <span data-lang="en" class="visible">Apps</span>
+            <span data-lang="ru">Приложения</span>
+          </h4>
+          <ul>
+            <li><a href="apps/wallpaper.html">
+              <span data-lang="en" class="visible">Wallpaper App</span>
+              <span data-lang="ru">Обои</span>
+            </a></li>
+            <li><a href="apps/currency.html">
+              <span data-lang="en" class="visible">Currency Converter</span>
+              <span data-lang="ru">Конвертер валют</span>
+            </a></li>
+            <li><a href="apps/workout.html">
+              <span data-lang="en" class="visible">Workout App</span>
+              <span data-lang="ru">Тренировки</span>
+            </a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>
+            <span data-lang="en" class="visible">Legal</span>
+            <span data-lang="ru">Документы</span>
+          </h4>
+          <ul>
+            <li><a href="privacy.html">
+              <span data-lang="en" class="visible">Privacy Policy</span>
+              <span data-lang="ru">Политика конфиденциальности</span>
+            </a></li>
+            <li><a href="terms.html">
+              <span data-lang="en" class="visible">Terms of Service</span>
+              <span data-lang="ru">Условия использования</span>
+            </a></li>
+            <li><a href="contact.html">
+              <span data-lang="en" class="visible">Contact</span>
+              <span data-lang="ru">Контакт</span>
+            </a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 dovdov.dev.
+          <span data-lang="en" class="visible">All rights reserved.</span>
+          <span data-lang="ru">Все права защищены.</span>
+        </p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">
+            <span data-lang="en" class="visible">Privacy</span>
+            <span data-lang="ru">Политика</span>
+          </a>
+          <a href="terms.html">
+            <span data-lang="en" class="visible">Terms</span>
+            <span data-lang="ru">Условия</span>
+          </a>
+          <a href="contact.html">
+            <span data-lang="en" class="visible">Contact</span>
+            <span data-lang="ru">Контакт</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
